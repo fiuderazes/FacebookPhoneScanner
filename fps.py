@@ -14,7 +14,8 @@ print '''
 #Richiesta
 global opener
 opener = urllib2.build_opener()
-opener.addheaders.append(('Cookie', 'lu=xxx; fr=xxx; c_user=xxx; xs=xxx;'))
+#I cookie non sono più necessari per eseguire la richiesta
+#opener.addheaders.append(('Cookie', 'lu=xxx; fr=xxx; c_user=xxx; xs=xxx;'))
 opener.addheaders.append(('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'))
 
 def fbCheck(numero):
@@ -106,4 +107,4 @@ try:
 		print "Inserisci una scelta valida! Uscendo...\n"
 
 except urllib2.URLError, e:
-	print "Non riesco a connettermi a Facebook!\nControlla le impostazioni di rete e i cookie alla riga 23!\n"+str(e)+"\n"
+	print "Non riesco a connettermi a Facebook!\nControlla le impostazioni di rete!\n"+str(e)+"\n"
