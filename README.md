@@ -7,8 +7,6 @@
 <li>Entrambe le modalità sono multithread e il numero di thread è selezionabile dall'utente</li>
 </ul>
 
-<p>IMPORTANTE: Occorre ricordarsi di aggiornare i valori dei cookie alla riga 23 OGNI VOLTA prima di avviare lo script (Facebook li aggiorna in continuazione).</p>
-
 <p>USO:  <code>pyhton fps.py</code></p>
 
 <p>I numeri vanno inseriti con il prefisso nazionale all'inizio ma senza il simbolo "+" (es: 39350XXXXXXX)<br /><br />
