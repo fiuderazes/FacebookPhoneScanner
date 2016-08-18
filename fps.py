@@ -36,18 +36,17 @@ try:
 	if mode == 1:
 		threads = input("\nThread: ")
 		startn	= input("Numero di partenza: ")
-		startn_o= startn-1
 		endn	= input("Numero di fine: ")
 		finiti	= 0
 		print "\n"
-		if endn-startn_o>0:
+		if endn-startn-1>0:
 			class newThread(Thread):
 				def __init__(self):
 					Thread.__init__(self)
 					self.daemon = True
 					self.start()
 				def run(self):
-					global threads, startn, endn, finiti, startn_o
+					global threads, startn, endn, finiti
 					while True:
 						#Richiesta http
 						if startn<=endn:
@@ -55,11 +54,12 @@ try:
 							startn=startn+1
 						else:
 							finiti=finiti+1
+							break
 			for nt in range(threads):
 				newThread()
 			try:
 				while True:
-					if finiti>(endn-startn_o):
+					if finiti>=threads:
 						print "\nFinito!...\n"
 						exit()
 					time.sleep(1)
@@ -72,8 +72,9 @@ try:
 		file=open(filename)
 		file=file.readlines()
 		numerolinea=0
-		numerolineamax=len(file)-1
+		numerolineamax=len(file)
 		threads = input("Thread: ")
+		finiti=0
 		print "\n"
 		class newThread(Thread):
 			def __init__(self):
@@ -81,17 +82,22 @@ try:
 				self.daemon = True
 				self.start()
 			def run(self):
-				global numerolinea,numerolineamax
+				global numerolinea,numerolineamax,finiti
 				while True:
 					#Richiesta http
-					numero=file[numerolinea].rstrip()
-					numerolinea=numerolinea+1
-					fbCheck(int(numero))
+					if numerolinea<numerolineamax:
+						numero=file[numerolinea].rstrip()
+						fbCheck(int(numero))
+						numerolinea=numerolinea+1
+					else:
+						finiti=finiti+1
+						break
 		for nt in range(threads):
 			newThread()
 		try:
 			while True:
-				if numerolinea>numerolineamax:
+				if finiti>=threads:
+					print "\nFinito!...\n"
 					exit()
 				time.sleep(1)
 		except KeyboardInterrupt:
@@ -100,4 +106,4 @@ try:
 		print "Inserisci una scelta valida! Uscendo...\n"
 
 except urllib2.URLError, e:
-	print "Non riesco a connettermi a Facebook!\nControlla le impostazioni di rete e i cookie alla riga 23!\n"
+	print "Non riesco a connettermi a Facebook!\nControlla le impostazioni di rete e i cookie alla riga 23!\n"+str(e)+"\n"
