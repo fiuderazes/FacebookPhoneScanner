@@ -11,6 +11,8 @@
 
 <p>USO:  <code>pyhton fps.py</code></p>
 
-<p>E’ inoltre essenziale ricordarsi che Facebook permette di scansionare soltanto qualche centinaio di numeri all’ora, quindi se lo script non trova più risultati dopo vari minuti di esecuzione occorre aspettare il trascorrere dell’ora successiva.</p>
+<p>I numeri vanno inseriti con il prefisso nazionale all'inizio ma senza il simbolo "+" (es: 39350XXXXXXX)<br /><br />
+NON tutti i numeri possono essere abbinati ad un nome e cognome, in base alle impostazioni di privacy usate dalle persone (di default la privacy del numero telefonico è impostata su "pubblico")<br /><br />
+E’ inoltre essenziale ricordarsi che Facebook permette di scansionare soltanto qualche centinaio di numeri all’ora, quindi se lo script non trova più risultati dopo vari minuti di esecuzione occorre aspettare il trascorrere dell’ora successiva.</p>
 
 <h4>NON MI ASSUMO ALCUNA RESPONSABILITA' DELL'USO CHE FARETE DI QUESTO SCRIPT</h4>
