@@ -29,7 +29,7 @@ def fbCheck(numero):
 #Controllo se Facebook e' on
 try:
 	sys.stdout.write("Sto controllando se riesco a collegarmi a Facebook...\n")
-	ret = urllib2.urlopen('https://www.facebook.com/jacopotediosi')
+	ret = urllib2.urlopen('https://www.facebook.com/')
 	sys.stdout.write("Connessione riuscita!\n")
 	#Modalita' di scansione (range o da file)
 	mode = input("\n\nScegli la modalita'\n1. Range\n2. Da file\nScelta: ")
