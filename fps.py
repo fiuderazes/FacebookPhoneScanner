@@ -73,7 +73,7 @@ try:
 		file=file.readlines()
 		numerolinea=0
 		numerolineamax=len(file)-1
-		threads = input("\nThread: ")
+		threads = input("Thread: ")
 		print "\n"
 		class newThread(Thread):
 			def __init__(self):
