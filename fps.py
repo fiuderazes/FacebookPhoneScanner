@@ -86,7 +86,7 @@ try:
 					#Richiesta http
 					numero=file[numerolinea].rstrip()
 					numerolinea=numerolinea+1
-					fbCheck(numero)
+					fbCheck(int(numero))
 		for nt in range(threads):
 			newThread()
 		try:
