@@ -96,6 +96,7 @@ try:
 						break
 		for nt in range(threads):
 			newThread()
+			numerolinea=numerolinea+1
 		try:
 			while True:
 				if finiti>=threads:
