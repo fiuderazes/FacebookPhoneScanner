@@ -9,7 +9,7 @@
 
 <p>USO:  <code>pyhton fps.py</code></p>
 
-<p>Prima di avviare lo script sarebbe bene fare il login su Facebook con un normale browser, per evitare captcha che interferirebbero con il corretto funzionamento del programma.<br /><br />
+<p>Prima di avviare lo script sarebbe bene fare il login su Facebook con un normale browser, per evitare captcha che interferirebbero con il corretto funzionamento del programma. E' inoltre consigliato decommentare e modificare i cookie alla riga 18.<br /><br />
 I numeri vanno inseriti con il prefisso nazionale all'inizio ma senza il simbolo "+" (es: 39350XXXXXXX)<br /><br />
 NON tutti i numeri possono essere abbinati ad un nome e cognome, in base alle impostazioni di privacy usate dalle persone (di default la privacy del numero telefonico è impostata su "pubblico")<br /><br />
 E’ inoltre essenziale ricordarsi che Facebook permette di scansionare soltanto qualche centinaio di numeri all’ora, quindi se lo script non trova più risultati dopo vari minuti di esecuzione occorre aspettare il trascorrere dell’ora successiva.</p>
