@@ -14,7 +14,7 @@ print '''
 #Richiesta
 global opener
 opener = urllib2.build_opener()
-#I cookie non sono più necessari per eseguire la richiesta
+#I cookie non sono piu necessari per eseguire la richiesta
 #opener.addheaders.append(('Cookie', 'lu=xxx; fr=xxx; c_user=xxx; xs=xxx;'))
 opener.addheaders.append(('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'))
 
@@ -58,6 +58,7 @@ try:
 							break
 			for nt in range(threads):
 				newThread()
+				startn=startn+1
 			try:
 				while True:
 					if finiti>=threads:
