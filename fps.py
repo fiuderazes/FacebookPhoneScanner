@@ -40,7 +40,7 @@ try:
 		endn	= input("Numero di fine: ")
 		finiti	= 0
 		print "\n"
-		if endn-startn-1>0:
+		if endn-startn+1>0:
 			class newThread(Thread):
 				def __init__(self):
 					Thread.__init__(self)
@@ -68,7 +68,7 @@ try:
 			except KeyboardInterrupt:
 				print "\nUscendo...\n"
 		else:
-			print "\nIl numero finale deve essere inferiore o uguale a quello iniziale! Uscendo...\n"
+			print "\nIl numero iniziale deve essere inferiore o uguale a quello finale! Uscendo...\n"
 	elif mode == 2:
 		filename = raw_input("\nInput file: ")
 		file=open(filename)
