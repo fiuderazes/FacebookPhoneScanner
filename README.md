@@ -1,4 +1,4 @@
-<h1 id="facebookphonescanner"><b>#FacebookPhoneScanner</b></h1>
+<h1 id="facebookphonescanner"><b>#FacebookPhoneScanner (Python 2.x)</b></h1>
 
 <ul>
 <li>Questo script esegue un bruteforce sulla ricerca delle persone tramite numero telefonico offerta da <a href="http://www.facebook.com">Facebook.com</a></li>
